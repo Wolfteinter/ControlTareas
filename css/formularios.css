@@ -1,0 +1,241 @@
+#formulario {
+    margin: 15px auto;
+    padding: 10px;
+    text-align: center;
+    width: 80%;
+    background-color: rgba(113, 19, 48, 0.89);
+    color: #fff;
+    padding-top: 30px;
+    border-radius: 25px;
+    font-family: Verdana, sans-serif;
+}
+
+#formulario label {
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+.campo {
+    margin-top: 10px;
+    width: 90%;
+    font-size: 1.2em;
+    padding: 5px;
+    color: #650321;
+    font-weight: bold;
+}
+
+.campo_sm{
+    margin-top: 10px;
+    width: 35%;
+    font-size: 1.2em;
+    padding: 5px;
+    color: #650321;
+    font-weight: bold;
+}
+
+.campo::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    font-weight: normal;
+}
+
+.campo-sm {
+    width: 60%;
+}
+
+select {
+    display: block;
+    margin: 18px auto;
+    width: 35%;
+    font-size: 1.2em;
+    padding: 5px;
+    color: #650321;
+}
+.select-sm{
+    margin: 5px auto !important;
+    width: 90% !important;
+    font-size: 1em !important;
+    padding: 1px !important;
+}
+
+.selectable {
+    display: block;
+    margin: 13px;
+}
+
+.botones {
+    margin: 20px auto;
+    width: 60%;
+}
+
+.botones-change{
+    margin: 20px auto;
+    width: 100%;
+}
+
+.botones input {
+    margin: auto 15px;
+    padding: 5px 15px;
+    font-size: 1.1em;
+    border: none;
+    background: #e4e5e7;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.botones-change input {
+    margin: auto 5px;
+    padding: 5px;
+    font-size: 1.1em;
+    border: none;
+    background: #e4e5e7;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.botones input:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+.botones-change input:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.botones #nuevo {
+    width: 60%;
+    background-color: #4CAF50;
+    font-weight: bold;
+    color: #fff;
+}
+.botones-change #cambio {
+    width: 60%;
+    background-color: #9D344B;
+    font-weight: bold;
+    color: #fff;
+}
+
+.botones #nuevo:hover {
+    background-color: #449d48;
+}
+.botones-change #cambio:hover {
+    background-color: #cb6a7f;
+}
+
+#busqueda {
+    width: 60%;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-image: url('../img/icons/search.png');
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    padding: 10px 15px 10px 40px;
+}
+
+.form-action-person {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.form-action-person table {
+    margin: 0 auto;
+    border: 1px solid #fff;
+    width: 60%;
+    border-spacing: 10px;
+}
+
+.form-action-person .label {
+    text-align: left;
+    width: 200px;
+    font-size: 1em;
+}
+
+#cambioPass {
+    display: none;
+}
+
+.margin-buttom {
+    margin-bottom: 30px;
+}
+
+.radio-opciones {
+    margin-top: 15px;
+    margin-bottom: 5px;
+    display: inline-block;
+    width: 40%;
+}
+
+.radio-opciones input[type="radio"] {
+    margin-left: 5px;
+    margin-right: 5px;
+    border: 1px solid #000;
+}
+
+.entradas input {
+    border-radius: 8px;
+}
+
+.entradas p {
+    margin-top: 5px;
+    font-size: 0.9em;
+}
+
+.decorado {
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    padding: 8px 12px 8px 37px;
+}
+
+#datos-personales #nombre, #datos-personales #apellido, #datos-personales #edad {
+    background-image: url('../img/icons/user.png');
+}
+
+#datos-contacto #telFijo, #datos-contacto #telMovil {
+    background-image: url('../img/icons/tel.png');
+}
+
+#datos-contacto #email, #datos-contacto #email-confirm {
+    background-image: url('../img/icons/mail.png');
+}
+
+#nuevaEscuela #nombreEscuela {
+    background-image: url('../img/icons/school.png');
+}
+
+#datos-interes-academico #otraCarrera {
+    background-image: url('../img/icons/school.png');
+}
+
+#escuelasEncontradas {
+    border: 1px solid #fff;
+    margin: 10px auto;
+    padding: 10px;
+    width: 60%;
+    color: #000;
+    clear: both;
+    text-align: left;
+    background: #fff;
+    max-height: 250px;
+    overflow: scroll;
+}
+
+.resultadoEscuela {
+    width: 100%;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: block;
+    padding: 3px;
+    color: #154586;
+    margin: 4px auto;
+    font-size: 1.1em;
+}
+
+.resultadoEscuela:hover {
+    border: 1px solid #116e81;
+    outline: none;
+}
+.calificacion{
+    width: 60%;
+    font-size: 1.1em;
+}
+.img-Wpadding{
+    margin: 1px auto !important;
+    padding: 1px !important;
+}

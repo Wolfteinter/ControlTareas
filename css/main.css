@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+html {
+    min-height: 100%;
+    position: relative;
+}
+
+body {
+    margin: 0;
+    margin-bottom: 40px;
+    background: linear-gradient(#434055, black);
+    background-repeat: repeat-y;
+}
+
+header {
+	width: 100%;
+}
+
+.titulo {
+    width: 100%;
+    height: 50px;
+    padding: 3px;
+    text-align: center;
+    background-color: #9D344B;
+}
+
+.titulo h1 {
+    font-weight: bold;
+    color: #fff;
+}
+
+.subtitulo {
+    width: 40%;
+    margin-bottom: 20px !important;
+    padding: 5px;
+}
+.encabezado{
+    width: 80%;
+    height: 50px;
+    padding: 3px;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #9D344B;
+}
+.encabezado h1 {
+    font-size: 30px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.sombras {
+    text-shadow: 2px 2px #404040;
+}
+
+#alerta {
+    width: 80%;
+    border-radius: 10px;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.msj-danger {
+    border-color: #e4975f;
+    background-color: #f1dcde;
+    color: #dd4b39;
+    padding-top: 9px;
+    padding-bottom: 9px;
+}
+
+.msj-success {
+    border-color: #9ee6c1;
+    background-color: #c7f0db;
+    color: #5abe74;
+    padding-top: 9px;
+    padding-bottom: 9px;
+}
+
+.accion {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.center {
+    margin: 0 auto;
+    text-align: center;
+}
+
+footer {
+    padding: 10px;
+    width: 100%;
+    background: #9D344B;
+    font-weight: bold;
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+}
+
+/* Estilos para ls vista de editar el aspirante que se muestra como iFrame */
+.body-update {
+    background: rgba(59, 59, 59, 0) !important;
+}
+
+.fancybox-content {
+    background: rgba(0, 0, 0, 0) !important;
+}

@@ -1,0 +1,26 @@
+#contenedor {
+    width: 100%;
+}
+#menu {
+    padding-top: 0px;
+    text-align: center;
+    height: 800px;
+    background-color:#282828;
+    float:left;
+    width:20%;
+    clear:both;
+}
+#nuevo{
+    padding-top: 80px;
+}
+button{
+    width: 100%;
+    height: 50px;
+    background-color:#282828;
+    font-size: 1.2em;
+    font-family: 'Arial';
+    border: none;
+}
+button:hover{
+    background-color:#191919;
+}
