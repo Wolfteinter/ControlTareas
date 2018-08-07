@@ -7,6 +7,9 @@
         <link rel="stylesheet" href="../../css/main.css">
         <link rel="stylesheet" href="../../css/menu.css">
         <link rel="stylesheet" href="../../css/dashboard.css">
+
+        <script src="../../js/jquery-3.3.1.js"></script>
+        <script src="../../js/consultasDashboard.js"></script>
     </head>
     <body>
         <?php
@@ -46,7 +49,7 @@
                                 </div>
                                 <!--this div is the value-->
                                 <div class="value">
-                                    <span>30</span>
+                                    <span class="homeworkC"></span>
                                 </div>
 
 
@@ -60,7 +63,7 @@
                                 </div>
                                 <!--this div is the value-->
                                 <div class="value">
-                                    <span>30</span>
+                                    <span class="homeworkP"></span>
                                 </div>
                             </div>
                         </td>
@@ -72,7 +75,7 @@
                                 </div>
                                 <!--this div is the value-->
                                 <div class="value">
-                                    <span>30</span>
+                                    <span class="homeworkF"></span>
                                 </div>
                             </div>
                         </td>
@@ -81,5 +84,10 @@
 
             </div>
         </div>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                reed();
+            });
+        </script>
     </body>
 </html>

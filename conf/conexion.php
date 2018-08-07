@@ -1,11 +1,11 @@
 <?php
 $server = "localhost";
 $user = "root";
-$pass = "";
+$pass = "Fra9805Wolf";
 $databaseInicial = "task_controller";
 
-$enlaceInicial = new mysqli($server, $user, $pass, $databaseInicial);
-if($enlaceInicial->connect_errno) {
+$enlace = new mysqli($server, $user, $pass, $databaseInicial);
+if($enlace->connect_errno) {
     printf("Connect failed: %s\n", mysqli_connect_error());
     exit();
 }
@@ -16,6 +16,6 @@ ini_set('display_errors', '1');
 
 // Definir el juego de carácteres con el que se trabaja
 $charset = "utf8";
-mysqli_set_charset ($enlaceInicial , $charset);
+mysqli_set_charset ($enlace, $charset);
 
 ?>
