@@ -2,10 +2,17 @@
 <header>
     <nav class="navegacion">
         <ul class="menu">
-            <li><a href="../../src/dashboard/index.php">Menu</a></li>
-            <li><a href="../../src/tareasCreadas/index.php">Tareas creadas</a></li>
-            <li><a href="../../src/tareasPendiente/index.php">Tareas pendientes</a></li>
-            <li><a href="../../src/tareasFinalizadas/index.php">Tareas finalizadas</a></li>
+            <li><a href="../../src/dashboard/">Menu</a></li>
+            <li><a href="../../src/tareasCreadas/">Tareas creadas</a></li>
+            <li><a href="../../src/tareasPendiente/">Tareas pendientes</a></li>
+            <li><a href="../../src/tareasFinalizadas/">Tareas finalizadas</a></li>
+            <li><a href="#/">Catalogo</a>
+                <ul class="submenu">
+                    <li><a href="../../src/subject/">Materias</a></li>
+                    <li><a href="../../src/teacher/">Profesores</a></li>
+                </ul>
+
+            </li>
         </ul>
     </nav>
 </header>

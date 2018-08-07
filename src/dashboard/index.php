@@ -19,16 +19,31 @@
         <div id="container">
             <div id="menu">
                 <!--This is the button to show the tasks that the date of delivery is today -->
-                <div class="">
-                    <button type="button" name="button">Hoy</button>
+                <div id="cube-button">
+                    <div class="button-action">
+                        <button type="button" name="button">Hoy</button>
+                    </div>
+                    <div class="value-action">
+                        <span>2</span>
+                    </div>
                 </div>
                 <!--This is the button to show the tasks that the date of delivery is in this week -->
-                <div class="">
-                    <button type="button" name="button">Semana</button>
+                <div id="cube-button">
+                    <div class="button-action">
+                        <button type="button" name="button">Semana</button>
+                    </div>
+                    <div class="value-action">
+                        <span>5</span>
+                    </div>
                 </div>
                 <!--This is the button to show the tasks that the date of delivery is in this month -->
-                <div class="">
-                    <button type="button" name="button">Mes</button>
+                <div id="cube-button">
+                    <div class="button-action">
+                        <button type="button" name="button">Mes</button>
+                    </div>
+                    <div class="value-action">
+                        <span>13</span>
+                    </div>
                 </div>
                 <!--This is the button to create a new task, it will be with a modal-->
                 <div id="new">
