@@ -1,5 +1,12 @@
-#contenedor {
+#container {
+    display: block;
+    text-align: center;
     width: 100%;
+}
+#content{
+    display: block;
+    float:right;
+    width: 80%;
 }
 #menu {
     padding-top: 0px;
@@ -10,17 +17,46 @@
     width:20%;
     clear:both;
 }
-#nuevo{
+#new{
     padding-top: 80px;
+}
+
+#cube-date{
+    width: 70%;
+    height: 300px;
+    background-color:#272424;
+    border-radius: 20px;
+}
+
+#data{
+    padding-top: 150px;
+    width: 100%;
+}
+#data td{
+    width: 33%;
 }
 button{
     width: 100%;
-    height: 50px;
+    height: 60px;
     background-color:#282828;
     font-size: 1.2em;
     font-family: 'Arial';
     border: none;
 }
+span{
+    font-size: 2em;
+    font-family: 'Arial';
+    color: #4c4c4c;
+}
 button:hover{
     background-color:#191919;
+}
+.description{
+padding-top: 20px;
+}
+.value{
+    padding-top: 40px;
+}
+.value > span{
+    font-size: 4em;
 }
