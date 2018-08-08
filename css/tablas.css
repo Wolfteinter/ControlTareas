@@ -1,9 +1,12 @@
 .tabla-registros {
     margin: 0 auto;
     table-layout: auto;
-    width: 80%;
+    width: 60%;
     border-spacing: 3px;
     font-family: Helvetica, sans-serif;
+}
+.box-table{
+    padding-top: 30px;
 }
 .tabla-BD {
     padding-top: 60px;
@@ -14,11 +17,11 @@
 }
 
 .tabla-registros th {
-    background-color: #9D344B;
+    background-color: #21202a;
     padding: 5px;
     color: #fff;
     font-size: 1.2em;
-    border-radius: 8px;
+
 }
 .tabla-BD th {
     background-color: #9D344B;
@@ -27,13 +30,11 @@
     font-size: 1.2em;
     border-radius: 8px;
 }
-.tabla-registros th, .tabla-registros td {
-    box-shadow: 1px 1px 2px #373737;
-}
+
 
 .tabla-registros tr {
-    color: #4C0017;
-    background-color: #fafafa;
+    color: #232121;
+    background-color: #bfa5a5;
 }
 .tabla-BD tr {
     color: #353030;
@@ -41,16 +42,22 @@
 }
 
 .tabla-registros tr:nth-child(2n+1) {
-    background-color: #e8e1e1;
+    background-color: #21202a;
 }
 
 
 .tabla-registros td {
+    text-align: center;
+    background-color: #bfa5a5;
     padding-left: 5px;
-    font-size: 1.2em;
+    font-size: 20px;
+    line-height: 56px;
+    letter-spacing: -.005em;
+    font-weight: 600;
+    height: 40px;
 }
 .tabla-BD td {
-    background-color: #353030;
+    background-color: transparent;
     border-radius: 8px;
     font-size: 1em;
 }
@@ -108,4 +115,7 @@
     margin: 0 auto;
     table-layout: auto;
     width: 20%;
+}
+.accions-icon{
+    padding-top: 20px;
 }
