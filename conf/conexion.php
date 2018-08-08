@@ -1,8 +1,8 @@
 <?php
 $server = "localhost";
 $user = "root";
-$pass = "Fra9805Wolf";
-$databaseInicial = "task_controller";
+$pass = "";
+$databaseInicial = "homework_controller";
 
 $enlace = new mysqli($server, $user, $pass, $databaseInicial);
 if($enlace->connect_errno) {
