@@ -5,6 +5,9 @@
     border-spacing: 3px;
     font-family: Helvetica, sans-serif;
 }
+.box-table{
+    padding-top: 30px;
+}
 .tabla-BD {
     padding-top: 60px;
     margin: 0 auto;
@@ -112,4 +115,7 @@
     margin: 0 auto;
     table-layout: auto;
     width: 20%;
+}
+.accions-icon{
+    padding-top: 20px;
 }

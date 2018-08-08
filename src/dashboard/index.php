@@ -19,14 +19,17 @@
         <div id="container">
             <div id="menu">
                 <!--This is the button to show the tasks that the date of delivery is today -->
-                <div id="cube-button">
-                    <div class="button-action">
-                        <button type="button" name="button">Hoy</button>
+
+                    <div id="cube-button">
+                        <div class="button-action">
+                            <button type="button" name="button">Hoy</button>
+                        </div>
+                        <div class="value-action">
+                            <span>2</span>
+                        </div>
                     </div>
-                    <div class="value-action">
-                        <span>2</span>
-                    </div>
-                </div>
+
+
                 <!--This is the button to show the tasks that the date of delivery is in this week -->
                 <div id="cube-button">
                     <div class="button-action">
@@ -58,41 +61,52 @@
                     <tr>
                         <td align="center">
                             <!--this div is the total de tareas creadas-->
-                            <div id="cube-date">
-                                <div class="description">
-                                    <span>Total de tareas creadas</span>
+                            <a href="../tareasCreadas/">
+                                <div id="box-border">
+                                    <div id="cube-date">
+                                        <div class="description">
+                                            <span>Total de tareas creadas</span>
+                                        </div>
+                                        <!--this div is the value-->
+                                        <div class="value">
+                                            <span class="homeworkC"></span>
+                                        </div>
+                                    </div>
                                 </div>
-                                <!--this div is the value-->
-                                <div class="value">
-                                    <span class="homeworkC"></span>
-                                </div>
-
-
-                            </div>
+                            </a>
                         </td>
                         <td align="center">
-                            <div id="cube-date">
-                                <!--this div is the tareas en proceso-->
-                                <div class="description">
-                                    <span>Tareas en proceso</span>
+                            <a href="../tareasPendiente/">
+                                <div id="box-border">
+                                    <div id="cube-date">
+                                        <!--this div is the tareas en proceso-->
+                                        <div class="description">
+                                            <span>Tareas en proceso</span>
+                                        </div>
+                                        <!--this div is the value-->
+                                        <div class="value">
+                                            <span class="homeworkP"></span>
+                                        </div>
+                                    </div>
                                 </div>
-                                <!--this div is the value-->
-                                <div class="value">
-                                    <span class="homeworkP"></span>
-                                </div>
-                            </div>
+                            </a>
                         </td>
                         <td align="center">
-                            <div id="cube-date">
-                                <!--this div is the tareas finalizadas-->
-                                <div class="description">
-                                    <span>Tareas finalizadas</span>
+                            <a href="../tareasFinalizadas/">
+                                <div id="box-border">
+                                    <div id="cube-date">
+                                        <!--this div is the tareas finalizadas-->
+                                        <div class="description">
+                                            <span>Tareas finalizadas</span>
+                                        </div>
+                                        <!--this div is the value-->
+                                        <div class="value">
+                                            <span class="homeworkF"></span>
+                                        </div>
+                                    </div>
                                 </div>
-                                <!--this div is the value-->
-                                <div class="value">
-                                    <span class="homeworkF"></span>
-                                </div>
-                            </div>
+                            </a>
+
                         </td>
                     </tr>
                 </table>

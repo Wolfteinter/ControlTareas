@@ -27,7 +27,6 @@
     border: none;
 
 }
-
 .campo_sm{
     margin-top: 10px;
     width: 35%;
@@ -35,6 +34,10 @@
     padding: 5px;
     color: #650321;
     font-weight: bold;
+}
+.box-input{
+    padding-top: 20px;
+    padding-left: 65px;
 }
 
 .campo::-webkit-input-placeholder { /* Chrome/Opera/Safari */
@@ -44,7 +47,7 @@
 .campo-sm {
     width: 60%;
 }
-
+/*
 select {
     display: block;
     margin: 18px auto;
@@ -64,6 +67,7 @@ select {
     display: block;
     margin: 13px;
 }
+*/
 .entry{
     height: 100px;
     width: 60%;
@@ -270,3 +274,36 @@ select {
     margin: 1px auto !important;
     padding: 1px !important;
 }
+.select {
+  position: relative;
+  border: 1px solid #21202a;
+  width: 300px;
+  height: 40px;
+  overflow: hidden;
+  background-color: #21202a;
+}
+  .select:before {
+    content: '';
+    position: absolute;
+    right: 5px;
+    top: 15px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 7px 5px 0 5px;
+    z-index: 5;
+    pointer-events: none;
+    border: 6px solid transparent;
+    border-color: #fff transparent transparent transparent;
+  }
+  .select select {
+
+    color: #fff;
+    padding: 8px 8px;
+    width: 110%;
+    border: none;
+    box-shadow: none;
+    background-color: transparent;
+    background-image: none;
+    appearance: none;
+  }

@@ -12,6 +12,7 @@ function reedTeacher(){
 
 function save(){
     var data=$('#nombre').val();
+    $('#nombre').val('');
     $.ajax({
         url: "actionSaveTeacher.php",
         data:{name:data},
