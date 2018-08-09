@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Materias</title>
+        <title>Asignacion de materias</title>
 
         <link rel="stylesheet" href="../../css/main.css">
         <link rel="stylesheet" href="../../css/menu.css">
@@ -10,8 +10,8 @@
         <link rel="stylesheet" href="../../css/tablas.css">
 
         <script src="../../js/jquery-3.3.1.js"></script>
-        <script src="../../js/querySubject.js"></script>
-        <script src="../../js/validations.js"></script>
+        <script src="../../js/queryAssignSubject.js"></script>
+        <!--<script src="../../js/selectCustom.js"></script>-->
     </head>
     <body>
         <?php
@@ -23,8 +23,8 @@
     -->
 		<form id="formulario">
             <div class="entry">
-                <input autocomplete="off" type="text" class="campo" id="nombre" name="nombre" placeholder="Nombre de la materia">
-                <!--
+
+
                 <div class="box-input">
                     <div class="select">
                         <select class="" id="teachers">
@@ -32,7 +32,14 @@
                     </div>
 
                 </div>
-            -->
+
+                <div class="box-input-right">
+                    <div class="select">
+                        <select class="" id="subjects">
+                        </select>
+                    </div>
+                </div>
+
             </div>
 			<div class="botones">
                 <input class="btn-form" type="reset" id="borrar" value="Limpiar">
@@ -44,7 +51,8 @@
 
             <table class="tabla-registros">
                 <thead>
-                    <th>Nombre</th>
+                    <th>Profesor</th>
+                    <th>Materia</th>
                     <th>Acciones</th>
                 </thead>
                 <tbody class="registros">

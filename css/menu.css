@@ -38,7 +38,7 @@
 .submenu {
 	position: absolute;
 	background: #474646;
-	width: 120%;
+	width: 100%;
 	visibility: hidden;
 	opacity: 0;
 	transition: opacity 1.3s;

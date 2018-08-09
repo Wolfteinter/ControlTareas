@@ -12,6 +12,7 @@
 
         <script src="../../js/jquery-3.3.1.js"></script>
         <script src="../../js/queryTeacher.js"></script>
+        <script src="../../js/validations.js"></script>
     </head>
     <body>
         <?php

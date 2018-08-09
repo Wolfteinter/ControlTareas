@@ -36,3 +36,10 @@ function reedHomeworkProcess(){
         }
     });
 }
+function show(){
+    $('#modalAlumno').css('display', 'block');
+}
+
+function hide(){
+    $('#modalAlumno').css('display', 'none');
+}

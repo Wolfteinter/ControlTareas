@@ -1,9 +1,9 @@
 <?php
     include("../../conf/conexion.php");
-    $consulta="SELECT id,name FROM teacher";
+    $consulta="SELECT id,fullname FROM teacher";
     $resultado = mysqli_query($enlace, $consulta);
     while($row = mysqli_fetch_assoc($resultado)){
-        $teacher=$row['name'];
+        $teacher=$row['fullname'];
         $id=$row['id'];
 
         $X = "<a href='javascript: void(0);' class='accion' onclick='erase(".$id.")'>

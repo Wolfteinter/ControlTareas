@@ -10,6 +10,7 @@
                 <ul class="submenu">
                     <li><a href="../../src/subject/">Materias</a></li>
                     <li><a href="../../src/teacher/">Profesores</a></li>
+                    <li><a href="../../src/assignSubject/">Asignar Materia</a></li>
                 </ul>
             </li>
         </ul>

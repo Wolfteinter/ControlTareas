@@ -12,6 +12,7 @@ html {
 }
 
 body {
+    max-height: 100%;
     margin: 0;
     margin-bottom: 40px;
     background: linear-gradient(#434055, black);
