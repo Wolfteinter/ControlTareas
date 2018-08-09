@@ -78,6 +78,7 @@
 
 .tabla-registros td a img {
     padding: 5px;
+    vertical-align: middle;
 }
 
 .selectPago {

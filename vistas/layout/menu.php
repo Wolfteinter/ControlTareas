@@ -11,7 +11,6 @@
                     <li><a href="../../src/subject/">Materias</a></li>
                     <li><a href="../../src/teacher/">Profesores</a></li>
                 </ul>
-
             </li>
         </ul>
     </nav>
