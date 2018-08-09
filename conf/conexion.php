@@ -1,7 +1,7 @@
 <?php
 $server = "localhost";
 $user = "root";
-$pass = "";
+$pass = "Fra9805Wolf";
 $databaseInicial = "homework_controller";
 
 $enlace = new mysqli($server, $user, $pass, $databaseInicial);

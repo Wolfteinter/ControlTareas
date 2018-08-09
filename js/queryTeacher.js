@@ -12,17 +12,22 @@ function reedTeacher(){
 
 function save(){
     var data=$('#nombre').val();
-    $('#nombre').val('');
-    $.ajax({
-        url: "actionSaveTeacher.php",
-        data:{name:data},
-        error: function(p1, p2, p3) {
-            alert(p3);
-        },
-        success: function(d, status, jqXHR) {
-            reedTeacher();
-        }
-    });
+    if(withOutSpace(data)&&IsNotNull(data)){
+        $.ajax({
+            url: "actionSaveTeacher.php",
+            data:{name:data},
+            error: function(p1, p2, p3) {
+                alert(p3);
+            },
+            success: function(d, status, jqXHR) {
+                $('#nombre').val('');
+                reedTeacher();
+            }
+        });
+    }else{
+        alert("Error de entrada");
+    }
+
 
 }
 

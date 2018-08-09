@@ -7,9 +7,11 @@
         <link rel="stylesheet" href="../../css/main.css">
         <link rel="stylesheet" href="../../css/menu.css">
         <link rel="stylesheet" href="../../css/dashboard.css">
+        <link rel="stylesheet" href="../../css/modal.css">
 
         <script src="../../js/jquery-3.3.1.js"></script>
         <script src="../../js/consultasDashboard.js"></script>
+
     </head>
     <body>
         <?php
@@ -49,8 +51,11 @@
                     </div>
                 </div>
                 <!--This is the button to create a new task, it will be with a modal-->
+                <?php
+        			include("../../vistas/layout/modalAddSubject.html");
+        		?>
                 <div id="new">
-                    <a href="" class="" >
+                    <a href="../tareasCreadas" class="" >
 			        <img src="../../img/icons/añadir.png" alt="E" title="add">
                      </a>
                 </div>

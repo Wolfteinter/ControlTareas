@@ -7,7 +7,12 @@
     padding-top: 30px;
     font-family: Verdana, sans-serif;
 }
-
+#btn-new{
+    text-align: center;
+    width: 100%;
+    clear:both;
+    padding-top: 20px;
+}
 #formulario label {
     font-size: 1.3em;
     font-weight: bold;
@@ -27,17 +32,27 @@
     border: none;
 
 }
-.campo_sm{
-    margin-top: 10px;
-    width: 35%;
-    font-size: 1.2em;
-    padding: 5px;
-    color: #650321;
-    font-weight: bold;
+.campo_big{
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: -.005em;
+    font-weight: 200;
+    color: #fff;
+    text-transform: none;
+    caret-color: #1db954;
+    width: 80%;
+    background-color: #21202a;
+    border:1px;
 }
 .box-input{
+    float:left;
     padding-top: 20px;
     padding-left: 65px;
+}
+.box-input-right{
+    float:right;
+    padding-top: 20px;
+
 }
 
 .campo::-webkit-input-placeholder { /* Chrome/Opera/Safari */
@@ -306,4 +321,7 @@ select {
     background-color: transparent;
     background-image: none;
     appearance: none;
+  }
+  .div-select-modal{
+      padding-left: 430px;
   }
