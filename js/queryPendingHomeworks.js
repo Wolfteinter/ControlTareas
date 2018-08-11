@@ -28,7 +28,6 @@ function play(varId) {
             else {
                mostrarMensajeFlash("msj-success", respuesta, 4000);
                readHomeworks();
-
             }
         }
     });
@@ -74,6 +73,7 @@ function resume(varId) {
             }
             else {
                mostrarMensajeFlash("msj-success", respuesta, 4000);
+               readHomeworks();
             }
         }
     });

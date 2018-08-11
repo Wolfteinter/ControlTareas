@@ -17,11 +17,11 @@
         // Add and update total_time
         if($totalTime != NULL) {
             $total = $min + $totalTime;
-            $query = "UPDATE homework SET total_time=".$total.", temp_time=NULL";
+            $query = "UPDATE homework SET total_time=".$total.", temp_time=NULL WHERE id=".$id;
         }
         // Update total_time
         else {
-            $query = "UPDATE homework SET total_time=".$min.", temp_time=NULL";
+            $query = "UPDATE homework SET total_time=".$min.", temp_time=NULL WHERE id=".$id;
         }
 
         if($ans = mysqli_query($enlace, $query)) {

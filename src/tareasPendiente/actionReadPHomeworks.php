@@ -1,7 +1,7 @@
 <?php
     include("../../conf/conexion.php");
 
-    $query = "SELECT id, description, delivery_date, init_planned_date, end_planned_date, init_real_date, temp_time FROM homework WHERE status='inProcess'";
+    $query = "SELECT id, description, delivery_date, init_planned_date, end_planned_date, init_real_date, temp_time FROM homework WHERE status='inProcess' ORDER BY temp_time DESC";
     if($ans = mysqli_query($enlace, $query)) {
         while ($row = mysqli_fetch_assoc($ans)) {
             $id = $row['id'];

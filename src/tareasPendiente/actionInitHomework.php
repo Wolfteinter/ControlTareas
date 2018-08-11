@@ -7,9 +7,9 @@
     $query = "UPDATE homework SET init_real_date='".$today."', temp_time='".$today."' WHERE id=".$id;
 
     if($ans = mysqli_query($enlace, $query)) {
-        echo "La tarea se ha iniciado";
+        echo "La tarea se ha iniciado.";
     }
     else {
-        echo "Ha ocurrido un error";
+        echo "Ha ocurrido un error.";
     }
 ?>

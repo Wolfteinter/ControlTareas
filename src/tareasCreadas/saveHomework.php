@@ -5,14 +5,15 @@
     $deliveryDate = $_POST['delivery_date'];
     $initPlannedDate = $_POST['init_planned_date'];
     $endPlannedDate = $_POST['end_planned_date'];
-    $subjectId = $_POST['subject'];
     $plannedId = $_POST['time'];
 
-    // Build the string query
-    $query = "INSERT INTO homework(description, delivery_date, init_planned_date, end_planned_date, planned_time_id, subject_id) VALUES('".$description."', '".$deliveryDate."', '".$initPlannedDate."', '".$endPlannedDate."', ".$plannedId.", ".$subjectId.")";
-    echo $query;
+    $ths_id = $_POST['ths_id'];
+
+    // Build the string query for insert new homework
+    $query = "INSERT INTO homework(description, delivery_date, init_planned_date, end_planned_date, planned_time_id, teacher_has_subject_id) VALUES('".$description."', '".$deliveryDate."', '".$initPlannedDate."', '".$endPlannedDate."', ".$plannedId.", ".$ths_id.")";
+
     if($ans = mysqli_query($enlace, $query)) {
-        echo "Tarea agregada";
+        echo "Tarea agregada.";
     }
     else {
         echo "Ha ocurrido un error";

@@ -11,6 +11,7 @@
                     <li><a href="../../src/subject/">Materias</a></li>
                     <li><a href="../../src/teacher/">Profesores</a></li>
                     <li><a href="../../src/assignSubject/">Asignar Materia</a></li>
+                    <li><a href="../../src/plannedTimes/">Tiempos planeados</a></li>
                 </ul>
             </li>
         </ul>
