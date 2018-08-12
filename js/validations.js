@@ -13,3 +13,9 @@ function IsNotNull(str){
     }
     return ans;
 }
+
+function confirmDelete() {
+    var x = confirm("¿Estás seguro?");
+    if(x) return true;
+    else return false;
+}
