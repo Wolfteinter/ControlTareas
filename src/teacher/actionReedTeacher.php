@@ -15,11 +15,7 @@
         echo "<tr>";
             echo "<td width='70%'>".$teacher."</td>";
 
-            echo "<td width='30%'>";
-                echo "<div class='accions-icon'>";
-                    echo $X.$A;
-                echo "</div>";
-            echo "</td>";
+            echo "<td width='30%'>".$X.$A."</td>";
         echo "</tr>";
     }
 

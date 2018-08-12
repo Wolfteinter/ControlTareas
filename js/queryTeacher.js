@@ -19,9 +19,16 @@ function save(){
             error: function(p1, p2, p3) {
                 alert(p3);
             },
-            success: function(d, status, jqXHR) {
-                $('#nombre').val('');
-                reedTeacher();
+            success: function(ans, status, jqXHR) {
+                if(ans.indexOf("error") > -1) {
+                    mostrarMensajeFlash("msj-danger", ans, 4000);
+                    $('#nombre').focus();
+                }
+                else {
+                    mostrarMensajeFlash("msj-success", ans, 4000);
+                    $('#nombre').val('');
+                    reedTeacher();
+                }
             }
         });
     }else{
@@ -32,31 +39,71 @@ function save(){
 }
 
 function erase(idDelete){
-    $.ajax({
-        url: "actionDeleteTeacher.php",
-        data:{id:idDelete},
-        error: function(p1, p2, p3) {
-            alert(p3);
-        },
-        success: function(d, status, jqXHR) {
-            reedTeacher();
-        }
-    });
+    if(confirmDelete()) {
+        $.ajax({
+            url: "actionDeleteTeacher.php",
+            data:{id:idDelete},
+            error: function(p1, p2, p3) {
+                alert(p3);
+            },
+            success: function(ans, status, jqXHR) {
+                if(ans.indexOf("error") > -1) {
+                    mostrarMensajeFlash("msj-danger", ans, 4000);
+                }
+                else {
+                    mostrarMensajeFlash("msj-success", ans, 4000);
+                    reedTeacher();
+                }
+            }
+        });
+    }
 }
-function patch(idPatch){
+
+function patch(idEditar) {
     $.ajax({
-        url: "actionPatchAula.php",
-        data: {id: idEditar},
+        url: "actionPatchTeacher.php",
+        data: {
+            id: idEditar,
+        },
         error: function(p1, p2, p3) {
-            estadoDefault();
             alert("Error: " + p3);
         },
         success: function(data, status, jqXHR) {
-            estadoDefault();
             var d = JSON.parse(data);
-            $('#auxiliar').val(d.id);
-            $('#nombre').val(d.nombre);
+            $('#nombre').val(d.fullname);
+            $('#nombre').data('idEdit', d.id);
             $('#btnEnviar').val('Actualizar');
+            $('#btnEnviar').attr('onclick', 'update();');
+        }
+    });
+}
+
+function update() {
+    var _fullname = $('#nombre').val();
+    var idEditar = $('#nombre').data('idEdit');
+
+    $.ajax({
+        url: "actionUpdateTeacher.php",
+        data: {
+            fullname : _fullname,
+            id : idEditar,
+        },
+        error: function(p1, p2, p3) {
+            alert("Error: " + p3);
+        },
+        success: function(ans, status, jqXHR) {
+            if(ans.indexOf("error") > -1) {
+                $('#nombre').focus();
+                mostrarMensajeFlash("msj-danger", ans, 4000);
+            }
+            else {
+                reedTeacher();
+                $("#nombre").removeData("idEdit");
+                $('#nombre').val('');
+                $('#btnEnviar').val('Guardar');
+                mostrarMensajeFlash("msj-success", ans, 4000);
+                $('#btnEnviar').attr('onclick', 'save();');
+            }
         }
     });
 }
