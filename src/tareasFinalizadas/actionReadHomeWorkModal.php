@@ -20,10 +20,9 @@ if($row = mysqli_fetch_assoc($resultado)){
     $totalTime=$row['total_time'];
 
     echo "<tr>";
-        echo "<td><b>Descripcion : </b></td>";
-        echo "<td>".$description."</td>";
+        echo "<td><b>Descripcion : </b>".$description."</td>";
     echo "</tr>";
-    /*echo "<tr>";
+    echo "<tr>";
         echo "<td><b>Fecha de entrega : </b>".$initDelivery."</td>";
     echo "</tr>";
     echo "<tr>";
@@ -43,7 +42,7 @@ if($row = mysqli_fetch_assoc($resultado)){
     echo "</tr>";
     echo "<tr>";
         echo "<td><b>Tiempo real : </b>".$totalTime."</td>";
-    echo "</tr>";*/
+    echo "</tr>";
 
 }
  ?>

@@ -1,5 +1,6 @@
 function read(){
     readHomework();
+    readHomeworkAll_Information();
 }
 
 function readHomework(){
@@ -11,6 +12,19 @@ function readHomework(){
         },
         success: function(d, status, jqXHR) {
             $('.registros').html(d);
+        }
+    });
+}
+function readHomeworkAll_Information(){
+
+    $.ajax({
+        url: "actionReadAll_Information.php",
+        error: function(p1, p2, p3) {
+            alert(p3);
+        },
+        success: function(d, status, jqXHR) {
+            //alert(d);
+            $('.all_information').html(d);
         }
     });
 }

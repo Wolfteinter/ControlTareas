@@ -13,14 +13,12 @@ while($row = mysqli_fetch_assoc($resultado)){
     <img src='../../img/icons/eye-24.png' alt='X' title='Eliminar'>
     </a>";
     echo "<tr>";
-        echo "<td width='38%'>".$description."</td>";
-        echo "<td width='16%'>".$initDate."</td>";
-        echo "<td width='16%'>".$endDate."</td>";
+        echo "<td width='28%'>".$description."</td>";
+        echo "<td width='21%'>".$initDate."</td>";
+        echo "<td width='21%'>".$endDate."</td>";
         echo "<td width='15%'>".$totalTime."</td>";
         echo "<td width='15%'>";
-
                 echo $X;
-
         echo "</td>";
     echo "</tr>";
 }

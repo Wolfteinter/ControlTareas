@@ -183,12 +183,6 @@ select {
     margin-bottom: 30px;
 }
 
-.form-action-person table {
-    margin: 0 auto;
-    border: 1px solid #fff;
-    width: 60%;
-    border-spacing: 10px;
-}
 
 .form-action-person .label {
     text-align: left;
