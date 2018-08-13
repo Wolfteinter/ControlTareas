@@ -57,3 +57,53 @@ function reedAssignments(){
         }
     });
 }
+
+function patch(idEditar) {
+    $.ajax({
+        url: "actionPatchAssignSubject.php",
+        data: {
+            id: idEditar,
+        },
+        error: function(p1, p2, p3) {
+            alert("Error: " + p3);
+        },
+        success: function(data, status, jqXHR) {
+            var d = JSON.parse(data);
+            $('#teachers').val(d.teachers);
+            $('#subjects').val(d.subjects);
+            $('#auxiliar').data('idEdit', d.id);
+            $('#btnEnviar').val('Actualizar');
+            $('#btnEnviar').attr('onclick', 'update();');
+        }
+    });
+}
+
+function update() {
+    var _teacher = $('#teachers').val();
+    var _subject = $('#subjects').val();
+    var idEditar = $('#auxiliar').data('idEdit');
+
+    $.ajax({
+        url: "actionUpdateAssignSubject.php",
+        data: {
+            teacher: _teacher,
+            subject: _subject,
+            id: idEditar,
+        },
+        error: function(p1, p2, p3) {
+            alert("Error: " + p3);
+        },
+        success: function(ans, status, jqXHR) {
+            if(ans.indexOf("error") > -1) {
+                mostrarMensajeFlash("msj-danger", ans, 4000);
+            }
+            else {
+                read();
+                $("#auxiliar").removeData("idEdit");
+                $('#btnEnviar').val('Guardar');
+                mostrarMensajeFlash("msj-success", ans, 4000);
+                $('#btnEnviar').attr('onclick', 'save();');
+            }
+        }
+    });
+}

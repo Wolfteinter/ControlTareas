@@ -11,7 +11,10 @@
 
         <script src="../../js/jquery-3.3.1.js"></script>
         <script src="../../js/queryAssignSubject.js"></script>
-        <!--<script src="../../js/selectCustom.js"></script>-->
+        <script src="../../js/mensajesFlash.js"></script>
+        <!-- Para mostrar mensajes flash bonitos -->
+	    <link rel="stylesheet" href="../../css/iziToast.min.css">
+	    <script src="../../js/iziToast.min.js" type="text/javascript"></script>
     </head>
     <body>
         <?php

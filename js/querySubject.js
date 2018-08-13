@@ -47,3 +47,52 @@ function erase(idDelete){
         }
     });
 }
+
+function patch(idEditar) {
+    $.ajax({
+        url: "actionPatchSubject.php",
+        data: {
+            id: idEditar,
+        },
+        error: function(p1, p2, p3) {
+            alert("Error: " + p3);
+        },
+        success: function(data, status, jqXHR) {
+            var d = JSON.parse(data);
+            $('#nombre').val(d.name);
+            $('#nombre').data('idEdit', d.id);
+            $('#btnEnviar').val('Actualizar');
+            $('#btnEnviar').attr('onclick', 'update();');
+        }
+    });
+}
+
+function update() {
+    var _name = $('#nombre').val();
+    var idEditar = $('#nombre').data('idEdit');
+
+    $.ajax({
+        url: "actionUpdateSubject.php",
+        data: {
+            name : _name,
+            id : idEditar,
+        },
+        error: function(p1, p2, p3) {
+            alert("Error: " + p3);
+        },
+        success: function(ans, status, jqXHR) {
+            if(ans.indexOf("error") > -1) {
+                $('#nombre').focus();
+                mostrarMensajeFlash("msj-danger", ans, 4000);
+            }
+            else {
+                reedSubject();
+                $("#nombre").removeData("idEdit");
+                $('#nombre').val('');
+                $('#btnEnviar').val('Guardar');
+                mostrarMensajeFlash("msj-success", ans, 4000);
+                $('#btnEnviar').attr('onclick', 'save();');
+            }
+        }
+    });
+}

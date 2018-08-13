@@ -26,11 +26,7 @@ while($row = mysqli_fetch_assoc($resultado)){
     echo "<tr>";
         echo "<td width='40%'>".$teacher."</td>";
         echo "<td width='40%'>".$subject."</td>";
-        echo "<td width='20%'>";
-            echo "<div class='accions-icon'>";
-                echo $X.$A;
-            echo "</div>";
-        echo "</td>";
+        echo "<td width='20%'>".$X.$A."</td>";
     echo "</tr>";
 }
 
