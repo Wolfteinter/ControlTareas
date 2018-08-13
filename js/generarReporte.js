@@ -8,7 +8,11 @@ function DescargarPDF(ContenidoID,nombre) {
         var materia=$("#materiasCreadas option:selected").text();
         var D=new Date();
 
-        specialElementHandlers = {};
+        var elementHandler = {
+            '#reporte': function (element, renderer) {
+                return true;
+            }
+        };
 
         pdf.setFontSize(15);
         pdf.setFontType("bold");
@@ -19,9 +23,12 @@ function DescargarPDF(ContenidoID,nombre) {
         pdf.addImage(logo, 'PNG', 720, 10, 50, 70);
         pdf.text(10, 60,"Reporte de tareas");
 
-        var margins = {top: 100,bottom: 100,left: 10,width: 1100};
+        var margins = {top: 100,bottom: 100,left: 10,right:10,width:1000};
 
-        pdf.fromHTML(html, margins.left, margins.top, {'width': margins.width},function(dispose) {pdf.save(nombre+'.pdf');}, margins);
+        pdf.fromHTML(html,10,100, {'width': 180,'elementHandlers': elementHandler});
+        pdf.save(nombre+'.pdf');
+
+
 
 
 }

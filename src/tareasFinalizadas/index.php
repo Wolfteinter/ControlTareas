@@ -18,11 +18,12 @@
     </head>
     <body>
         <?php
-        	include("../../vistas/layout/menu.php");
-        ?>
-        <?php
 			include("../../vistas/layout/modalView.html");
 		?>
+        <?php
+        	include("../../vistas/layout/menu.php");
+        ?>
+
         <h1 class="titulo">Tareas finalizadas</h1>
         <table class="tabla-registros" style="width:90%;margin-top:50px;">
             <thead>
@@ -35,7 +36,7 @@
             <tbody class="registros">
             </tbody>
         </table>
-        <div hidden id="reporte">
+        <div hidden id="reporte" width="90%">
             <table >
                 <header>
                     <td>Descripcion</td>

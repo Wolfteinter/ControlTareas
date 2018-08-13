@@ -40,19 +40,13 @@
     color: #fff;
     text-transform: none;
     caret-color: #1db954;
-    width: 80%;
+    width: 95%;
     background-color: #21202a;
     border:1px;
-}
-.box-input{
-    float:left;
-    padding-top: 20px;
-    padding-left: 65px;
-}
-.box-input-right{
-    float:right;
-    padding-top: 20px;
-
+    resize: none;
+    padding: 10px;
+    border-radius: 5px;
+    outline: none;
 }
 
 .campo::-webkit-input-placeholder { /* Chrome/Opera/Safari */
@@ -62,33 +56,6 @@
 .campo-sm {
     width: 60%;
 }
-/*
-select {
-    display: block;
-    margin: 18px auto;
-    width: 35%;
-    font-size: 1.2em;
-    padding: 5px;
-    color: #650321;
-}
-.select-sm{
-    margin: 5px auto !important;
-    width: 90% !important;
-    font-size: 1em !important;
-    padding: 1px !important;
-}
-
-.selectable {
-    display: block;
-    margin: 13px;
-}
-*/
-.entry{
-    height: 100px;
-    width: 60%;
-    float:left;
-}
-
 .botones {
     height: 100px;
     float:right;
@@ -226,55 +193,6 @@ select {
     padding: 8px 12px 8px 37px;
 }
 
-#datos-personales #nombre, #datos-personales #apellido, #datos-personales #edad {
-    background-image: url('../img/icons/user.png');
-}
-
-#datos-contacto #telFijo, #datos-contacto #telMovil {
-    background-image: url('../img/icons/tel.png');
-}
-
-#datos-contacto #email, #datos-contacto #email-confirm {
-    background-image: url('../img/icons/mail.png');
-}
-
-#nuevaEscuela #nombreEscuela {
-    background-image: url('../img/icons/school.png');
-}
-
-#datos-interes-academico #otraCarrera {
-    background-image: url('../img/icons/school.png');
-}
-
-#escuelasEncontradas {
-    border: 1px solid #fff;
-    margin: 10px auto;
-    padding: 10px;
-    width: 60%;
-    color: #000;
-    clear: both;
-    text-align: left;
-    background: #fff;
-    max-height: 250px;
-    overflow: scroll;
-}
-
-.resultadoEscuela {
-    width: 100%;
-    background: none;
-    border: none;
-    cursor: pointer;
-    display: block;
-    padding: 3px;
-    color: #154586;
-    margin: 4px auto;
-    font-size: 1.1em;
-}
-
-.resultadoEscuela:hover {
-    border: 1px solid #116e81;
-    outline: none;
-}
 .calificacion{
     width: 60%;
     font-size: 1.1em;
@@ -283,15 +201,34 @@ select {
     margin: 1px auto !important;
     padding: 1px !important;
 }
-.select {
-  position: relative;
-  border: 1px solid #21202a;
-  width: 300px;
-  height: 40px;
-  overflow: hidden;
-  background-color: #21202a;
+.entry{
+    padding-left: 100px;
+    height: 120px;
+    width: 500px;
+    float:left;
 }
-  .select:before {
+.box-input{
+    float:left;
+    padding-top: 20px;
+    padding-left: 0px;
+}
+.box-input-right{
+    float:right;
+    padding-left: 20px;
+    padding-top: 20px;
+
+}
+.select {
+    position: relative;
+    border: 1px solid #21202a;
+    width: 400px;
+    height: 40px;
+    overflow: hidden;
+    background-color: #21202a;
+    margin: 0 auto;
+}
+
+.select:before {
     content: '';
     position: absolute;
     right: 5px;
@@ -304,18 +241,57 @@ select {
     pointer-events: none;
     border: 6px solid transparent;
     border-color: #fff transparent transparent transparent;
-  }
-  .select select {
+}
 
+.select select {
     color: #fff;
     padding: 8px 8px;
-    width: 110%;
+    width: 120%;
     border: none;
     box-shadow: none;
     background-color: transparent;
     background-image: none;
     appearance: none;
-  }
-  .div-select-modal{
-      padding-left: 430px;
-  }
+}
+
+.div-select-modal {
+    margin: 5px auto;
+}
+
+.group-inline-2 {
+    margin: 20px auto;
+}
+
+.group-inline-2 > p {
+    display: inline;
+}
+
+.buttons {
+    margin-top: 25px;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    text-align: justify;
+}
+
+.buttons:after {
+    content: '';
+    display: inline-block;
+    width: 90%;
+}
+
+.buttons:before {
+    content: '';
+    display: block;
+    margin-top: -1.25em;
+}
+
+.buttons input {
+    display: inline-block;
+    margin-right: -.25em;
+    padding: .75em 1.5em;
+    position: relative;
+    top: 1.25em;
+    cursor: pointer;
+}

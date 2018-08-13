@@ -2,7 +2,7 @@
 include("../../conf/conexion.php");
 $consulta="SELECT * FROM homework WHERE status='finished'";
 $resultado = mysqli_query($enlace, $consulta);
-if($row = mysqli_fetch_assoc($resultado)){
+while($row = mysqli_fetch_assoc($resultado)){
     $description=$row['description'];
     $initDelivery=$row['delivery_date'];
     $initPlannedDate=$row['init_planned_date'];
@@ -25,7 +25,7 @@ if($row = mysqli_fetch_assoc($resultado)){
             echo "<td width='10%'>".$initRealDate."</td>";
             echo "<td width='10%'>".$endRealDate."</td>";
             echo "<td width='10%'>".$plannedTimeId."</td>";
-            echo "<td width='10%'>".$totalTime."</td>";
+            echo "<td width='10%'>".$totalTime." m</td>";
         echo "</tr>";
 
 

@@ -1,6 +1,6 @@
 <?php
 include("../../conf/conexion.php");
-$consulta="SELECT id,description,init_real_date,end_real_date,total_time FROM homework";
+$consulta="SELECT id,description,init_real_date,end_real_date,total_time FROM homework WHERE status='finished'";
 $resultado = mysqli_query($enlace, $consulta);
 while($row = mysqli_fetch_assoc($resultado)){
     $id=$row['id'];

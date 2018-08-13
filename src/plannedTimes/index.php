@@ -2,16 +2,15 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Profesor</title>
+        <title>Materias</title>
 
         <link rel="stylesheet" href="../../css/main.css">
         <link rel="stylesheet" href="../../css/menu.css">
-
         <link rel="stylesheet" href="../../css/formularios.css">
         <link rel="stylesheet" href="../../css/tablas.css">
 
         <script src="../../js/jquery-3.3.1.js"></script>
-        <script src="../../js/queryTeacher.js"></script>
+        <script src="../../js/queryPlannedTimes.js"></script>
         <script src="../../js/validations.js"></script>
         <script src="../../js/mensajesFlash.js"></script>
         <!-- Para mostrar mensajes flash bonitos -->
@@ -22,13 +21,10 @@
         <?php
         	include("../../vistas/layout/menu.php");
         ?>
-        <!--<div class="titulo">
-			<h1>Catálogo: Materias</h1>
-		</div>
-    -->
+        <h1 class="titulo">Tiempos planeados</h1>
 		<form id="formulario">
             <div class="entry">
-                <input autocomplete="off" type="text" class="campo" id="nombre" name="nombre" placeholder="Nombre del profesor">
+                <input autocomplete="off" type="text" class="campo" id="ptime" name="tiempo" placeholder="Ej. 1 hora 10 minutos">
             </div>
 			<div class="botones">
                 <input class="btn-form" type="reset" id="borrar" value="Limpiar">
@@ -36,20 +32,20 @@
 			</div>
 		</form>
         <!-- Con el fin de mostrar los datos de la tabla al cargar el documento -->
-        <script type="text/javascript">
-            $(document).ready(function() {
-                reedTeacher();
-            });
+            <table class="tabla-registros">
+                <thead>
+                    <th>Tiempo</th>
+                    <th>Acciones</th>
+                </thead>
+                <tbody class="registros">
+                </tbody>
+            </table>
+
+        <script>
+        $(document).ready(function() {
+            read();
+        });
         </script>
-        <p id="auxiliar"></p>
-        <table class="tabla-registros">
-            <thead>
-                <th>Nombre</th>
-                <th>Acciones</th>
-            </thead>
-            <tbody class="registros">
-            </tbody>
-        </table>
 
     </body>
 </html>

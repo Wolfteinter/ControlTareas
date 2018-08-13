@@ -1,8 +1,8 @@
-function reedTeacher(){
+function read() {
     $.ajax({
-        url: "actionReedTeacher.php",
+        url: "actionReadPlannedTimes.php",
         error: function(p1, p2, p3) {
-            alert(p3);
+            alert("Error: " + p3);
         },
         success: function(d, status, jqXHR) {
             $('.registros').html(d);
@@ -10,41 +10,44 @@ function reedTeacher(){
     });
 }
 
-function save(){
-    var data=$('#nombre').val();
-    if(withOutSpace(data)&&IsNotNull(data)){
+function save() {
+    var ptime = $('#ptime').val();
+    if(withOutSpace(ptime) && IsNotNull(ptime)) {
         $.ajax({
-            url: "actionSaveTeacher.php",
-            data:{name:data},
+            url: "actionSavePlannedTime.php",
+            data: {
+                time: ptime,
+            },
             error: function(p1, p2, p3) {
-                alert(p3);
+                alert("Error: " + p3);
             },
             success: function(ans, status, jqXHR) {
                 if(ans.indexOf("error") > -1) {
                     mostrarMensajeFlash("msj-danger", ans, 4000);
-                    $('#nombre').focus();
+                    $('#ptime').focus();
                 }
                 else {
                     mostrarMensajeFlash("msj-success", ans, 4000);
-                    $('#nombre').val('');
-                    reedTeacher();
+                    $('#ptime').val('');
+                    read();
                 }
             }
         });
-    }else{
+    }
+    else {
         alert("Error de entrada");
     }
-
-
 }
 
-function erase(idDelete){
+function del(idDelete) {
     if(confirmDelete()) {
         $.ajax({
-            url: "actionDeleteTeacher.php",
-            data:{id:idDelete},
+            url: "actionDeletePlannedTime.php",
+            data: {
+                id: idDelete,
+            },
             error: function(p1, p2, p3) {
-                alert(p3);
+                alert("Error: " + p3);
             },
             success: function(ans, status, jqXHR) {
                 if(ans.indexOf("error") > -1) {
@@ -52,26 +55,26 @@ function erase(idDelete){
                 }
                 else {
                     mostrarMensajeFlash("msj-success", ans, 4000);
-                    reedTeacher();
+                    read();
                 }
             }
         });
     }
 }
 
-function patch(idEditar) {
+function patch(_id) {
     $.ajax({
-        url: "actionPatchTeacher.php",
+        url: "actionPatchPlannedTime.php",
         data: {
-            id: idEditar,
+            id: _id,
         },
         error: function(p1, p2, p3) {
             alert("Error: " + p3);
         },
         success: function(data, status, jqXHR) {
             var d = JSON.parse(data);
-            $('#nombre').val(d.fullname);
-            $('#nombre').data('idEdit', d.id);
+            $('#ptime').val(d.ptime);
+            $('#ptime').data('idEdit', d.id);
             $('#btnEnviar').val('Actualizar');
             $('#btnEnviar').attr('onclick', 'update();');
         }
@@ -79,13 +82,13 @@ function patch(idEditar) {
 }
 
 function update() {
-    var _fullname = $('#nombre').val();
-    var idEditar = $('#nombre').data('idEdit');
+    var _ptime = $('#ptime').val();
+    var idEditar = $('#ptime').data('idEdit');
 
     $.ajax({
-        url: "actionUpdateTeacher.php",
+        url: "actionUpdatePlannedTime.php",
         data: {
-            fullname : _fullname,
+            ptime : _ptime,
             id : idEditar,
         },
         error: function(p1, p2, p3) {
@@ -93,13 +96,13 @@ function update() {
         },
         success: function(ans, status, jqXHR) {
             if(ans.indexOf("error") > -1) {
-                $('#nombre').focus();
+                $('#ptime').focus();
                 mostrarMensajeFlash("msj-danger", ans, 4000);
             }
             else {
-                reedTeacher();
-                $("#nombre").removeData("idEdit");
-                $('#nombre').val('');
+                read();
+                $("#ptime").removeData("idEdit");
+                $('#ptime').val('');
                 $('#btnEnviar').val('Guardar');
                 mostrarMensajeFlash("msj-success", ans, 4000);
                 $('#btnEnviar').attr('onclick', 'save();');
