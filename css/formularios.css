@@ -48,16 +48,6 @@
     border-radius: 5px;
     outline: none;
 }
-.box-input{
-    float:left;
-    padding-top: 20px;
-    padding-left: 65px;
-}
-.box-input-right{
-    float:right;
-    padding-top: 20px;
-
-}
 
 .campo::-webkit-input-placeholder { /* Chrome/Opera/Safari */
     font-weight: normal;
@@ -66,33 +56,6 @@
 .campo-sm {
     width: 60%;
 }
-/*
-select {
-    display: block;
-    margin: 18px auto;
-    width: 35%;
-    font-size: 1.2em;
-    padding: 5px;
-    color: #650321;
-}
-.select-sm{
-    margin: 5px auto !important;
-    width: 90% !important;
-    font-size: 1em !important;
-    padding: 1px !important;
-}
-
-.selectable {
-    display: block;
-    margin: 13px;
-}
-*/
-.entry{
-    height: 100px;
-    width: 60%;
-    float:left;
-}
-
 .botones {
     height: 100px;
     float:right;
@@ -182,6 +145,18 @@ select {
     padding: 10px 15px 10px 40px;
 }
 
+.form-action-person {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+
+.form-action-person .label {
+    text-align: left;
+    width: 200px;
+    font-size: 1em;
+}
+
 #cambioPass {
     display: none;
 }
@@ -226,11 +201,27 @@ select {
     margin: 1px auto !important;
     padding: 1px !important;
 }
+.entry{
+    padding-left: 100px;
+    height: 120px;
+    width: 500px;
+    float:left;
+}
+.box-input{
+    float:left;
+    padding-top: 20px;
+    padding-left: 0px;
+}
+.box-input-right{
+    float:right;
+    padding-left: 20px;
+    padding-top: 20px;
 
+}
 .select {
     position: relative;
     border: 1px solid #21202a;
-    width: 600px;
+    width: 400px;
     height: 40px;
     overflow: hidden;
     background-color: #21202a;
