@@ -11,11 +11,18 @@
             $subjectName = $row['name'];
             $teacher = $row['fullname'];
 
+            if($status == "Pendiente") {
+                $status = "<img src='../../img/icons/process.png' alt='pendiente' title='Pendiente'>";
+            }
+            else {
+                $status = "<img src='../../img/icons/checked.png' alt='terminada' title='Terminada'>";
+            }
+
             echo "<tr>";
-                echo "<td>".$des."</td>";
-                echo "<td>".$deliveryDate."</td>";
-                echo "<td>".$status."</td>";
-                echo "<td>".$subjectName.", ".$teacher."</td>";
+                echo "<td width='43%'>".$des."</td>";
+                echo "<td width='10%'>".$deliveryDate."</td>";
+                echo "<td width='7%'>".$status."</td>";
+                echo "<td width='40%'>".$subjectName.", ".$teacher."</td>";
             echo "</tr>";
         }
     }
