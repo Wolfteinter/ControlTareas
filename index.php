@@ -11,5 +11,8 @@
         <?php
         	include("vistas/layout/menu.php");
         ?>
+        <script type="text/javascript">
+            location.href = "src/dashboard/";
+        </script>
     </body>
 </html>

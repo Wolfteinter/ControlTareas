@@ -38,7 +38,7 @@
             }
 
             echo "<tr>";
-                echo "<td>".$description."</td>";
+                echo "<td width='40%'>".$description."</td>";
                 echo "<td>".$delivery_date."</td>";
                 echo "<td>".$i_p_d."</td>";
                 echo "<td>".$e_p_d."</td>";

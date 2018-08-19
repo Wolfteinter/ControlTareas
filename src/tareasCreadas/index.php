@@ -29,8 +29,8 @@
         <h1 class="titulo">Tareas creadas</h1>
         <div id="btn-new">
             <a onclick="show();" class="" >
-            <img src="../../img/icons/añadir.png" alt="E" title="add">
-             </a>
+            <img src="../../img/icons/añadir.png" alt="add" title="Agregar tarea">
+            </a>
         </div>
         <?php
 			include("../../vistas/layout/modalAddSubject.html");
