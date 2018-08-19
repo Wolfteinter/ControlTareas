@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
     <head>
         <meta charset="utf-8">
         <title>Tareas creadas</title>
@@ -28,8 +28,8 @@
         ?>
         <h1 class="titulo">Tareas creadas</h1>
         <div id="btn-new">
-            <a onclick="show();" class="" >
-            <img src="../../img/icons/añadir.png" alt="add" title="Agregar tarea">
+            <a onclick="show();" class="btn-add">
+                <img src="../../img/icons/añadir.png" alt="add" title="Agregar tarea">
             </a>
         </div>
         <?php

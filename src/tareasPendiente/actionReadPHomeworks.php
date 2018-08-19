@@ -6,7 +6,11 @@
         while ($row = mysqli_fetch_assoc($ans)) {
             $id = $row['id'];
             $description = $row['description'];
-            $delivery_date = $row['delivery_date'];
+            // Fecha para humanos
+            setlocale(LC_TIME, 'es_ES.UTF-8');
+            $delivery_date = strftime("%A, %d de %B", strtotime($row['delivery_date']));
+            $delivery_date = ucfirst($delivery_date);
+
             $i_p_d = $row['init_planned_date'];
             $e_p_d = $row['end_planned_date'];
             $temp_time = $row['temp_time'];
@@ -42,7 +46,7 @@
                 echo "<td>".$delivery_date."</td>";
                 echo "<td>".$i_p_d."</td>";
                 echo "<td>".$e_p_d."</td>";
-                echo "<td>".$play.$pause.$stop."</td>";
+                echo "<td width='98'>".$play.$pause.$stop."</td>";
             echo "</tr>";
         }
     }
