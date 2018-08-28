@@ -25,10 +25,19 @@ function DescargarPDF(ContenidoID,nombre) {
 
         var margins = {top: 100,bottom: 100,left: 10,right:10,width:1000};
 
-        pdf.fromHTML(html,10,100, {'width': 180,'elementHandlers': elementHandler});
+        pdf.fromHTML(html,10,100, {'width': 1000,'elementHandlers': elementHandler});
         pdf.save(nombre+'.pdf');
 
+}
 
+function createNote(){
+    showModal();
+}
+function showModal(){
+    $('#modalNote').css('display', 'block');
+}
 
-
+function hideModal(){
+    $('#clear').trigger('click');
+    $('#modalNote').css('display', 'none');
 }

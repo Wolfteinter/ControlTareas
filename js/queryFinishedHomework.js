@@ -4,9 +4,14 @@ function read(){
 }
 
 function readHomework(){
-
+    limiteInf = $('#limitInf').val();
+    limiteSup = $('#limitSup').val();
     $.ajax({
         url: "actionReadHomeworks.php",
+        data:{
+                fechaInit:limiteInf,
+                fechaEnd:limiteSup
+            },
         error: function(p1, p2, p3) {
             alert(p3);
         },
@@ -16,9 +21,15 @@ function readHomework(){
     });
 }
 function readHomeworkAll_Information(){
+    limiteInf = $('#limitInf').val();
+    limiteSup = $('#limitSup').val();
 
     $.ajax({
         url: "actionReadAll_Information.php",
+        data:{
+                fechaInit:limiteInf,
+                fechaEnd:limiteSup
+            },
         error: function(p1, p2, p3) {
             alert(p3);
         },

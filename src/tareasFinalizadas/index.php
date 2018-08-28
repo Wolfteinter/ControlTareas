@@ -25,7 +25,17 @@
         ?>
 
         <h1 class="titulo">Tareas finalizadas</h1>
-        <table class="tabla-registros" style="width:90%;margin-top:50px;">
+        <div class="Dates">
+            <input type="date" id="limitInf" name="" required>
+
+            <input type="date" id="limitSup" name="" required>
+
+            <input type="button" name="" value="Consultar" onclick="read();">
+        </div>
+
+
+
+        <table class="tabla-registros" style="width:90%;margin-top:20px;">
             <thead>
                 <th>Descripcion</th>
                 <th>Fecha de inicio</th>
@@ -54,10 +64,13 @@
                 </tbody>
             </table>
         </div>
-
+        <?php
+			include("../../vistas/layout/modalNote.html");
+		?>
         <div class="formulario"style="text-align:center; width:100%">
             <div class="botones" >
-                    <input type="button" id="nuevo" name="nuevo" value="Generar reporte" onclick="DescargarPDF('reporte','Reporte')">
+                <input type="button" id="nuevo" name="nuevo" value="Generar reporte" onclick="createNote()">
+                    <!--<input type="button" id="nuevo" name="nuevo" value="Generar reporte" onclick="DescargarPDF('reporte','Reporte')">-->
     		</div>
         </div>
 
@@ -65,9 +78,7 @@
 
 
     <script>
-    $(document).ready(function() {
-        read();
-    });
+
     </script>
 
     </body>

@@ -1,6 +1,9 @@
 <?php
 include("../../conf/conexion.php");
-$consulta="SELECT id,description,init_real_date,end_real_date,total_time FROM homework WHERE status='finished'";
+$DateInit=$_GET['fechaInit'];
+$DateEnd=$_GET['fechaEnd'];
+//SELECT * FROM homework WHERE (delivery_date >= '2018-08-13' AND delivery_date <= '2018-08-29' ) AND status="finished"
+$consulta="SELECT * FROM homework WHERE (delivery_date >= '".$DateInit."' AND delivery_date <= '".$DateEnd."' ) AND status='finished'";
 $resultado = mysqli_query($enlace, $consulta);
 while($row = mysqli_fetch_assoc($resultado)){
     $id=$row['id'];

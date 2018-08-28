@@ -38,7 +38,7 @@
                 </div>
             -->
             </div>
-			<div class="botones">
+			<div class="botones-Catalogo">
                 <input class="btn-form" type="reset" id="borrar" value="Limpiar">
                 <input class="btn-form" type="button" id="btnEnviar" value="Guardar" onclick="save();">
 			</div>

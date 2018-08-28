@@ -1,6 +1,9 @@
 <?php
 include("../../conf/conexion.php");
-$consulta="SELECT * FROM homework WHERE status='finished'";
+$DateInit=$_GET['fechaInit'];
+$DateEnd=$_GET['fechaEnd'];
+
+$consulta="SELECT * FROM homework WHERE (delivery_date >= '".$DateInit."' AND delivery_date <= '".$DateEnd."' ) AND status='finished'";
 $resultado = mysqli_query($enlace, $consulta);
 while($row = mysqli_fetch_assoc($resultado)){
     $description=$row['description'];

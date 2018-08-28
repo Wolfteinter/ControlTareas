@@ -35,6 +35,7 @@
         <?php
 			include("../../vistas/layout/modalAddSubject.html");
 		?>
+
         <table class="tabla-registros" style="width:94%;margin-top:50px;">
             <thead>
                 <th>Descripción</th>
