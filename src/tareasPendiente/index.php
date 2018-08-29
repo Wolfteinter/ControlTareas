@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Tareas pendientes</title>
+        <title>Tareas pendientes | Do-Do</title>
         <link rel="stylesheet" href="../../css/main.css">
         <link rel="stylesheet" href="../../css/menu.css">
         <link rel="stylesheet" href="../../css/tablas.css">
@@ -13,6 +13,9 @@
         <!-- Para mostrar mensajes flash bonitos -->
 	    <link rel="stylesheet" href="../../css/iziToast.min.css">
 	    <script src="../../js/iziToast.min.js" type="text/javascript"></script>
+        <!-- Add favicon -->
+        <link rel="icon" type="image/png" href="../../img/favicon/favicon-32x32.png" sizes="32x32" />
+        <link rel="icon" type="image/png" href="../../img/favicon/favicon-16x16.png" sizes="16x16" />
     </head>
     <body>
         <?php

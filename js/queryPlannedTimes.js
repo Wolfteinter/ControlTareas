@@ -110,3 +110,11 @@ function update() {
         }
     });
 }
+
+
+// Para confirmar el borrado de un elemento
+function confirmDelete() {
+    var x = confirm("¿Estás seguro?");
+    if(x) return true;
+    else return false;
+}

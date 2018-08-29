@@ -36,16 +36,18 @@ function save(){
 }
 
 function erase(idDelete){
-    $.ajax({
-        url: "actionDeleteSubject.php",
-        data:{id:idDelete},
-        error: function(p1, p2, p3) {
-            alert(p3);
-        },
-        success: function(d, status, jqXHR) {
-            reedSubject();
-        }
-    });
+    if(confirmDelete()) {
+        $.ajax({
+            url: "actionDeleteSubject.php",
+            data:{id:idDelete},
+            error: function(p1, p2, p3) {
+                alert(p3);
+            },
+            success: function(d, status, jqXHR) {
+                reedSubject();
+            }
+        });
+    }
 }
 
 function patch(idEditar) {
@@ -95,4 +97,12 @@ function update() {
             }
         }
     });
+}
+
+
+// Para confirmar el borrado de un elemento
+function confirmDelete() {
+    var x = confirm("¿Estás seguro?");
+    if(x) return true;
+    else return false;
 }

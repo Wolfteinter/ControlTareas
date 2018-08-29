@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title></title>
+        <title>Do-Do</title>
 
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/menu.css">

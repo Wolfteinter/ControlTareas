@@ -2,7 +2,7 @@
 <html lang="es">
     <head>
         <meta charset="utf-8">
-        <title>Tareas creadas</title>
+        <title>Tareas creadas | Do-Do</title>
         <link rel="stylesheet" href="../../css/main.css">
         <link rel="stylesheet" href="../../css/menu.css">
         <link rel="stylesheet" href="../../css/formularios.css">
@@ -21,6 +21,9 @@
                 margin: 5px;
             }
         </style>
+        <!-- Add favicon -->
+        <link rel="icon" type="image/png" href="../../img/favicon/favicon-32x32.png" sizes="32x32" />
+        <link rel="icon" type="image/png" href="../../img/favicon/favicon-16x16.png" sizes="16x16" />
     </head>
     <body>
         <?php

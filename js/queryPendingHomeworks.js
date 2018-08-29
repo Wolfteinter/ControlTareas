@@ -81,23 +81,31 @@ function resume(varId) {
 
 // save the final total time, change status of homework
 function stop(varId) {
-    $.ajax({
-        type: "POST",
-        url: "actionStopHomework.php",
-        data: {
-            id: varId,
-        },
-        error: function(arg1, arg2, arg3) {
-            alert("Error: " + arg3);
-        },
-        success: function(respuesta, status, jqXHR) {
-            if(respuesta.indexOf("error") > -1) {
-                mostrarMensajeFlash("msj-danger", respuesta, 4000);
+    if(confirmarFinalizacion()) {
+        $.ajax({
+            type: "POST",
+            url: "actionStopHomework.php",
+            data: {
+                id: varId,
+            },
+            error: function(arg1, arg2, arg3) {
+                alert("Error: " + arg3);
+            },
+            success: function(respuesta, status, jqXHR) {
+                if(respuesta.indexOf("error") > -1) {
+                    mostrarMensajeFlash("msj-danger", respuesta, 4000);
+                }
+                else {
+                   mostrarMensajeFlash("msj-success", respuesta, 4000);
+                   readHomeworks();
+                }
             }
-            else {
-               mostrarMensajeFlash("msj-success", respuesta, 4000);
-               readHomeworks();
-            }
-        }
-    });
+        });
+    }
+}
+
+function confirmarFinalizacion() {
+    var x = confirm("Confirmar, finalizar tarea.");
+    if(x) return true;
+    else return false;
 }

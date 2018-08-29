@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Menu</title>
+        <title>Do-Do | Inicio</title>
 
         <link rel="stylesheet" href="../../css/main.css">
         <link rel="stylesheet" href="../../css/menu.css">
@@ -11,6 +11,10 @@
 
         <script src="../../js/jquery-3.3.1.js"></script>
         <script src="../../js/consultasDashboard.js"></script>
+
+        <!-- Add favicon -->
+        <link rel="icon" type="image/png" href="../../img/favicon/favicon-32x32.png" sizes="32x32" />
+        <link rel="icon" type="image/png" href="../../img/favicon/favicon-16x16.png" sizes="16x16" />
 
     </head>
     <body>
