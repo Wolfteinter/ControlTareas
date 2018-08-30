@@ -1,0 +1,124 @@
+<div class="modal" id="modalDistractions">
+    <div class="modal-content">
+        <div class="modal-header">
+            <span class="close" onclick="hide();">&times;</span>
+        </div>
+        <form id="updateDistractions">
+            <table class="list-distraction">
+                <tr>
+                    <td>
+                        <label for="socialNetworks">Redes sociales:</label>
+                    </td>
+                    <td>
+                        <input type="text" value="0" disabled id="socialNetworks">
+                    </td>
+                    <td>
+                        <a href="javascript: void(0);" onclick="inc('socialNetworks')">
+                            <img src="../../img/icons/plus.png" alt="Aumentar">
+                        </a>
+                    </td>
+                    <td>
+                        <a href="javascript: void(0);" onclick="dec('socialNetworks')">
+                            <img src="../../img/icons/minus.png" alt="Disminuir">
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="basicNeeds">Necesidades básicas:</label>
+                    </td>
+                    <td>
+                        <input type="text" value="0" disabled id="basicNeeds">
+                    </td>
+                    <td>
+                        <a href="javascript: void(0);" onclick="inc('basicNeeds')">
+                            <img src="../../img/icons/plus.png" alt="Aumentar">
+                        </a>
+                    </td>
+                    <td>
+                        <a href="javascript: void(0);" onclick="dec('basicNeeds')">
+                            <img src="../../img/icons/minus.png" alt="Disminuir">
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="family">Familia:</label>
+                    </td>
+                    <td>
+                        <input type="text" value="0" disabled id="family">
+                    </td>
+                    <td>
+                        <a href="javascript: void(0);" onclick="inc('family')">
+                            <img src="../../img/icons/plus.png" alt="Aumentar">
+                        </a>
+                    </td>
+                    <td>
+                        <a href="javascript: void(0);" onclick="dec('family')">
+                            <img src="../../img/icons/minus.png" alt="Disminuir">
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="job">Trabajo:</label>
+                    </td>
+                    <td>
+                        <input type="text" value="0" disabled id="job">
+                    </td>
+                    <td>
+                        <a href="javascript: void(0);" onclick="inc('job')">
+                            <img src="../../img/icons/plus.png" alt="Aumentar">
+                        </a>
+                    </td>
+                    <td>
+                        <a href="javascript: void(0);" onclick="dec('job')">
+                            <img src="../../img/icons/minus.png" alt="Disminuir">
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="videogames">Videojuegos:</label>
+                    </td>
+                    <td>
+                        <input type="text" value="0" disabled id="videogames">
+                    </td>
+                    <td>
+                        <a href="javascript: void(0);" onclick="inc('videogames')">
+                            <img src="../../img/icons/plus.png" alt="Aumentar">
+                        </a>
+                    </td>
+                    <td>
+                        <a href="javascript: void(0);" onclick="dec('videogames')">
+                            <img src="../../img/icons/minus.png" alt="Disminuir">
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="others">Otro tipo:</label>
+                    </td>
+                    <td>
+                        <input type="text" value="0" disabled id="others">
+                    </td>
+                    <td>
+                        <a href="javascript: void(0);" onclick="inc('others')">
+                            <img src="../../img/icons/plus.png" alt="Aumentar">
+                        </a>
+                    </td>
+                    <td>
+                        <a href="javascript: void(0);" onclick="dec('others')">
+                            <img src="../../img/icons/minus.png" alt="Disminuir">
+                        </a>
+                    </td>
+                </tr>
+            </table>
+            <div class="buttons">
+                <input type="button" onclick="hide();" value="Cancelar">
+                <input type="submit" name="" value="Actualizar">
+            </div>
+            <br>
+        </form>
+    </div>
+</div>

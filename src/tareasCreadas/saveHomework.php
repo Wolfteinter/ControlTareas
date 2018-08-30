@@ -6,7 +6,6 @@
     $initPlannedDate = $_POST['init_planned_date'];
     $endPlannedDate = $_POST['end_planned_date'];
     $plannedId = $_POST['time'];
-
     $ths_id = $_POST['ths_id'];
 
     // Build the string query for insert new homework
@@ -14,6 +13,10 @@
 
     if($ans = mysqli_query($enlace, $query)) {
         echo "Tarea agregada.";
+        $last_id = mysqli_insert_id($enlace);
+        // Create and Init distraction tuple
+        $query = "INSERT INTO distraction(homework_id) VALUES($last_id)";
+        mysqli_query($enlace, $query);
     }
     else {
         echo "Ha ocurrido un error";

@@ -1,6 +1,7 @@
 function read(){
     reedSubject();
 }
+
 function reedSubject(){
     $.ajax({
         url: "actionReadSubject.php",
@@ -12,6 +13,7 @@ function reedSubject(){
         }
     });
 }
+
 function save(){
     var nameSubject = $('#nombre').val();
     if(withOutSpace(nameSubject)&&IsNotNull(nameSubject)){

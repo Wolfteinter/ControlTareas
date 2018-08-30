@@ -6,6 +6,8 @@
         <link rel="stylesheet" href="../../css/main.css">
         <link rel="stylesheet" href="../../css/menu.css">
         <link rel="stylesheet" href="../../css/tablas.css">
+        <link rel="stylesheet" href="../../css/modal.css">
+        <link rel="stylesheet" href="../../css/distractionModal.css">
 
         <script src="../../js/jquery-3.3.1.js"></script>
         <script src="../../js/queryPendingHomeworks.js"></script>
@@ -21,13 +23,10 @@
         <?php
         	include("../../vistas/layout/menu.php");
         ?>
-        <!-- Read the teachers and display in the table -->
-        <script type="text/javascript">
-            $(document).ready(function() {
-                readHomeworks();
-            });
-        </script>
         <h1 class="titulo">Tareas pendientes</h1>
+        <?php
+			include("../../vistas/layout/modalDistractions.html");
+		?>
         <table class="tabla-registros" style="width:90%;margin-top:50px;">
             <thead>
                 <th>Descripción</th>

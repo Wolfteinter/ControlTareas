@@ -21,6 +21,7 @@
                 </a>";
                 $pause = "";
                 $stop = "";
+                $delays = "";
             }
             else if($temp_time == NULL) {
                 $play = "<a href='javascript: void(0);' class='accion' onclick='resume(".$id.")'>
@@ -29,6 +30,9 @@
                 $pause = "";
                 $stop = "<a href='javascript: void(0);' class='accion' onclick='stop(".$id.")'>
                 <img src='../../img/icons/stop.png' alt='stop' title='Detener'>
+                </a>";
+                $delays = "<a href='javascript: void(0);' class='accion' onclick='addDelays(".$id.")'>
+                <img src='../../img/icons/late.png' alt='distractions' title='Agregar distracciones'>
                 </a>";
             }
             else {
@@ -39,14 +43,17 @@
                 $stop = "<a href='javascript: void(0);' class='accion' onclick='stop(".$id.")'>
                 <img src='../../img/icons/stop.png' alt='stop' title='Detener'>
                 </a>";
+                $delays = "<a href='javascript: void(0);' class='accion' onclick='addDelays(".$id.")'>
+                <img src='../../img/icons/late.png' alt='distractions' title='Agregar distracciones'>
+                </a>";
             }
 
             echo "<tr>";
-                echo "<td width='40%'>".$description."</td>";
+                echo "<td width='30%'>".$description."</td>";
                 echo "<td>".$delivery_date."</td>";
                 echo "<td>".$i_p_d."</td>";
                 echo "<td>".$e_p_d."</td>";
-                echo "<td width='98'>".$play.$pause.$stop."</td>";
+                echo "<td width='148'>".$play.$pause.$stop.$delays."</td>";
             echo "</tr>";
         }
     }

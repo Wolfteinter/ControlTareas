@@ -1,0 +1,45 @@
+.list-distraction {
+    width: 50%;
+    margin: 10px auto;
+}
+
+.list-distraction input {
+    width: 45px;
+    font-size: 1.2em;
+}
+
+.list-distraction label {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #fff;
+}
+
+.buttons {
+    margin-top: 25px;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    text-align: justify;
+}
+
+.buttons:after {
+    content: '';
+    display: inline-block;
+    width: 90%;
+}
+
+.buttons:before {
+    content: '';
+    display: block;
+    margin-top: -1.25em;
+}
+
+.buttons input {
+    display: inline-block;
+    margin-right: -.25em;
+    padding: .75em 1.5em;
+    position: relative;
+    top: 1.25em;
+    cursor: pointer;
+}
